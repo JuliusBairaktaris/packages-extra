@@ -1,10 +1,10 @@
 # Documentation
 
-This directory contains documentation assets for the LuCI Extra project.
+This directory contains documentation assets for the LuCI Extra temperature monitoring package.
 
 ## Contents
 
-- `screenshots/` - Visual assets for the README and documentation
+- `screenshots/` - Visual assets showing the temperature monitoring interface
 
 ## Contributing Documentation
 
