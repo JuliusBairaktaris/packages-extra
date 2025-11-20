@@ -25,8 +25,8 @@ src-git luciextra https://github.com/qosmio/luci-extra.git
 Update and install the feed:
 
 ```bash
-./scripts/feeds update luciextra
-./scripts/feeds install -a -p luciextra
+./scripts/feeds update luci_extra
+./scripts/feeds install -a -p luci_extra
 ```
 
 Select the package in menuconfig and build your firmware:
@@ -61,6 +61,10 @@ Licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for deta
 
 If you find this useful, consider supporting the project:
 
-[![Donate](https://img.shields.io/badge/Donate-Support%20Development-brightgreen.svg)](https://github.com/sponsors/qosmio)
+
+[![Donate with PayPal](https://github.com/qosmio/openwrt-ipq/raw/main-nss/paypal.png)](https://www.paypal.com/donate?business=3V3H2SZFY7DNQ&item_name=Maintaining+NSS+fork+of+OpenWRT+and+NSS+packages.)
+<a href="https://cash.app/$austinzk">
+  <img src="https://github.com/qosmio/openwrt-ipq/raw/main-nss/cashapp.png" alt="Cashapp" width="150px"/>
+</a>
 
 </div>
