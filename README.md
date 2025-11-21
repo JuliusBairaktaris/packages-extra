@@ -23,7 +23,7 @@ Add this repository to your OpenWrt feeds, update, and build as usual:
 
 ```bash
 # add feed (example)
-echo "src-git qosmio https://github.com/qosmio/packages-extra" >> feeds.conf.default
+echo "src-git qosmio https://github.com/qosmio/packages-extra" >> feeds.conf
 
 # update and install
 ./scripts/feeds update qosmio
