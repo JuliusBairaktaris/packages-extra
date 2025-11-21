@@ -1,66 +1,41 @@
-# LuCI Extra
+# Extra Packages
 
-LuCI package for displaying WiFi, CPU, and NSS temperature monitoring on IPQ807x/IPQ60xx routers.
+Extra OpenWrt + LuCI packages, focused on NSS builds for IPQ807x/IPQ60xx platforms.
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/Platform-IPQ807x%20%7C%20IPQ60xx-007ACC.svg)](https://www.qualcomm.com/)
+
+---
 
 ## Overview
 
-This package provides temperature monitoring capabilities for routers using the NSS fork, specifically targeting Qualcomm IPQ807x and IPQ60xx platforms. It displays real-time temperature readings for:
+A small collection of utility and LuCI packages tailored for [NSS builds of OpenWrt](https://github.com/qosmio/openwrt-ipq). Packages here aim to be minimal (and buggy) but mostly compatible with NSS-enabled firmwares.
 
-- WiFi radios
-- CPU cores
-- NSS (Network Subsystem) components
+## Packages
 
-## Installation
+| Package | Description |
+|---|---|
+| [luci-mod-status-nss](modules/luci-mod-status-nss) | LuCI status module that provides real-time temperatures for WiFi radios, CPU cores, and NSS components. |
 
-### Adding to OpenWrt Feeds
+## Installation (feed-level)
 
-Add this repository to your `feeds.conf` or `feeds.conf.default`:
-
-```conf
-src-git luci_extra https://github.com/qosmio/luci-extra.git
-```
-
-Update and install the feed:
+Add this repository to your OpenWrt feeds, update, and build as usual:
 
 ```bash
-./scripts/feeds update luci_extra
-./scripts/feeds install -a -p luci_extra
-```
+# add feed (example)
+echo "src-git qosmio https://github.com/qosmio/packages-extra" >> feeds.conf.default
 
-Select the package in menuconfig and build your firmware:
+# update and install
+./scripts/feeds update qosmio
+./scripts/feeds install -a -p qosmio
 
-```bash
+# configure and build
 make menuconfig
-make -j$(nproc)
 ```
-
-## Screenshots
-
-### Temperature Display
-
-![Dark](docs/screenshots/dark.png)
-![Light](docs/screenshots/light.png)
-
-*Real-time temperature monitoring for WiFi, CPU, and NSS components*
-
-## Compatibility
-
-- **Platforms**: IPQ807x, IPQ60xx
-- **Required**: NSS fork of OpenWrt
-- **Architecture**: ARM64
-
-## License
-
-Licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
-
----
 
 <div align="center">
 
 If you find this useful, consider supporting the project:
-
 
 [![Donate with PayPal](https://github.com/qosmio/openwrt-ipq/raw/main-nss/paypal.png)](https://www.paypal.com/donate?business=3V3H2SZFY7DNQ&item_name=Maintaining+NSS+fork+of+OpenWRT+and+NSS+packages.)
 <a href="https://cash.app/$austinzk">
